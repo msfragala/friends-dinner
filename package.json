@@ -1,0 +1,12 @@
+{
+  "name": "friends-dinner",
+  "version": "0.0.0",
+  "private": true,
+  "description": "WordPress theme for the Friend's Dinner blog",
+  "author": "Mitchell Gates <ms.fragala@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "url": "git@github.com:msfragala/friends-dinner.git",
+    "type": "git"
+  }
+}
