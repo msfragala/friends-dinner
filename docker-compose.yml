@@ -30,7 +30,7 @@ services:
     links:
       - db
     ports:
-      - 3000:80
+      - 8000:80
     volumes:
       - ./.plugins:/var/www/html/wp-content/plugins
       - ./theme:/var/www/html/wp-content/themes/friends-dinner
