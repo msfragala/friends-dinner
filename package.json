@@ -8,5 +8,8 @@
   "repository": {
     "url": "git@github.com:msfragala/friends-dinner.git",
     "type": "git"
+  },
+  "engines": {
+    "node": ">=6.9.1"
   }
 }
