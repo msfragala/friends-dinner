@@ -1,11 +1,14 @@
 const bs = require('browser-sync')
 const chalk = require('chalk')
 const gulp = require('gulp')
+const postcss = require('gulp-postcss')
 const print = require('gulp-print')
 const yargs = require('yargs')
 
 const argv = yargs.argv
 const browser = bs.create()
+
+const postcssConfig = require('./postcss.config.js')
 
 
 /******************************
@@ -28,6 +31,7 @@ function Styles() {
   watchStyles(argv.w)
   return gulp.src('./src/css/*.css')
   .pipe(print())
+  .pipe(postcss(postcssConfig))
   .pipe(gulp.dest('./theme/assets/css'))
 }
 
