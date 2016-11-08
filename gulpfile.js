@@ -1,14 +1,17 @@
 const bs = require('browser-sync')
 const chalk = require('chalk')
 const gulp = require('gulp')
+const named = require('vinyl-named')
 const postcss = require('gulp-postcss')
 const print = require('gulp-print')
+const webpack = require('webpack-stream')
 const yargs = require('yargs')
 
 const argv = yargs.argv
 const browser = bs.create()
 
 const postcssConfig = require('./postcss.config.js')
+const webpackConfig = require('./webpack.config.js')
 
 
 /******************************
@@ -39,6 +42,8 @@ function Scripts() {
   watchScripts(argv.w)
   return gulp.src('./src/js/*.js')
   .pipe(print())
+  .pipe(named())
+  .pipe(webpack(webpackConfig))
   .pipe(gulp.dest('./theme/assets/js'))
 }
 
