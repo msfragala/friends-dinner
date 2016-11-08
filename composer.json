@@ -1,0 +1,29 @@
+{
+  "name": "msfragala/friends-dinner",
+  "description": "WordPress theme for the Friend's Dinner blog",
+  "type": "wordpress-theme",
+  "authors": [
+    { "name": "Mitchell Gates" }
+  ],
+  "config": {
+    "secure-http": false
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "wpackagist-plugin/advanced-custom-fields": "4.4.11",
+    "wpackagist-plugin/timber-library": "1.1.8"
+  },
+  "extra": {
+    "installer-paths": {
+      ".plugins/{$name}/": [
+        "wpackagist-plugin/*",
+        "type:wordpress-plugin"
+      ]
+    }
+  }
+}
