@@ -1,6 +1,8 @@
 ### Friend's Dinner ###
 .mysql
 .plugins
+theme/assets/css
+theme/assets/js
 
 # Created by https://www.gitignore.io/api/macos,osx,windows,node,sublimetext
 
