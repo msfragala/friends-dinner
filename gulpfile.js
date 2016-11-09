@@ -91,6 +91,6 @@ function watchScripts(condition) {
 }
 
 function timestamp() {
-  const time = new Date
+  const time = new Date()
   return `[${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}]`
 }
