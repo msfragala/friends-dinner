@@ -1,0 +1,27 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": false
+  },
+  "extends": "xo/esnext",
+  "rules": {
+    "indent": ["error", 2],
+    "no-multiple-empty-lines": ["error", {
+      "max": 2,
+      "maxEOF": 1
+    }],
+    "semi": ["error", "never"],
+    "spaced-comment": ["error", "always", {
+      "exceptions": ["*"]
+    }]
+  }
+}
