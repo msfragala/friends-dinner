@@ -21,7 +21,6 @@ const webpackConfig = require('./webpack.config.js')
 gulp.task('build', Build)
 gulp.task('default', Default)
 gulp.task('scripts', Scripts)
-gulp.task('serve', Serve)
 gulp.task('styles', Styles)
 gulp.task('watch', Watch)
 
@@ -51,22 +50,13 @@ function Build(done) {
   gulp.parallel(Styles, Scripts)(done)
 }
 
-function Serve() {
-  browser.init({
-    notify: false,
-    open: argv.o,
-    port: 3000,
-    proxy: 'http://localhost:8000'
-  })
-}
-
 function Watch() {
   watchStyles(true)
   watchScripts(true)
 }
 
-function Default() {
-  gulp.series(Build, Serve)()
+function Default(done) {
+  gulp.series(Build)(done)
 }
 
 
