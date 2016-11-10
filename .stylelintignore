@@ -1,0 +1,5 @@
+.mysql
+.plugins
+node_modules
+theme
+vendor
