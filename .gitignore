@@ -1,4 +1,5 @@
 ### Friend's Dinner ###
+.env
 .mysql
 .plugins
 theme/assets/css
