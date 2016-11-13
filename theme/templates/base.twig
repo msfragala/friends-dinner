@@ -10,7 +10,10 @@
     <link rel="pingback" href="{{site.pingback_url}}">
     {{function('wp_head')}}
     {%- block head -%}{%- endblock head -%}
-    {%- block styles -%}{%- endblock styles -%}
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    {%- block styles -%}
+      <link rel="stylesheet" href="{{site.theme.link}}/assets/css/index.css">
+    {%- endblock styles -%}
   </head>
   <body class="{{body_class}}">
 
