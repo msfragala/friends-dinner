@@ -1,0 +1,33 @@
+.content-header {
+  margin-top: 30px;
+}
+
+.logo-container {
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.downline {
+  background: $color-black-1;
+  background: linear-gradient(to top, $color-red-1, $color-black-1, $color-red-1);
+  display: block;
+  width: 4px;
+  margin: 30px auto;
+
+  &--short {
+    height: 120px;
+  }
+
+  &--long {
+    height: 318px;
+  }
+}
+
+.introlede {
+  color: $color-red-1;
+  font-family: $font-crimson-text;
+  font-size: responsive 1.2rem 1.5rem;
+  line-height: 2.15rem;
+  margin: 0 auto;
+  max-width: 700px;
+}

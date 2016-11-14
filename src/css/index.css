@@ -2,3 +2,4 @@
 @import './base/normalize';
 @import './base/index';
 @import './partials/graphics';
+@import './views/home';
