@@ -1,4 +1,3 @@
-const bs = require('browser-sync')
 const chalk = require('chalk')
 const gulp = require('gulp')
 const named = require('vinyl-named')
@@ -8,7 +7,6 @@ const webpack = require('webpack-stream')
 const yargs = require('yargs')
 
 const argv = yargs.argv
-const browser = bs.create()
 const watchers = {}
 
 const postcssConfig = require('./postcss.config.js')
