@@ -39,9 +39,15 @@
 
 .emoji-panel__item {
   display: inline-block;
+  height: 80px;
   margin-right: 20px;
+  width: 80px;
 
   &:last-child {
     margin-right: 0;
   }
+}
+
+.emoji-sheet {
+  display: none;
 }
