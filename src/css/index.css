@@ -1,3 +1,4 @@
 @import './base/variables';
 @import './base/normalize';
 @import './base/index';
+@import './partials/graphics';

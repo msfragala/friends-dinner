@@ -1,0 +1,16 @@
+.friends-dinner-logo {
+  height: 100%;
+  width: 100%;
+
+  &__circle {
+    fill: $color-red-1;
+  }
+
+  &__line {
+    fill: $color-black-1;
+  }
+
+  &__text {
+    fill: $color-red-2;
+  }
+}
