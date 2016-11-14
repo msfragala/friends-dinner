@@ -9,6 +9,7 @@ const yargs = require('yargs')
 
 const argv = yargs.argv
 const browser = bs.create()
+const watchers = {}
 
 const postcssConfig = require('./postcss.config.js')
 const webpackConfig = require('./webpack.config.js')
@@ -65,16 +66,18 @@ function Default(done) {
 ******************************/
 
 function watchStyles(condition) {
-  if (condition) {
+  if (condition && !watchers.styles) {
     const globs = './src/css/**/*.css'
+    watchers.styles = true
     console.log(chalk.gray(timestamp()), chalk.green(`Watching "${globs}"`))
     gulp.watch(globs, Styles)
   }
 }
 
 function watchScripts(condition) {
-  if (condition) {
+  if (condition && !watchers.scripts) {
     const globs = './src/js/**/*.js'
+    watchers.scripts = true
     console.log(chalk.gray(timestamp()), chalk.green(`Watching "${globs}"`))
     gulp.watch(globs, Scripts)
   }
