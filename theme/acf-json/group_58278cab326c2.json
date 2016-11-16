@@ -3,11 +3,28 @@
     "title": "Recipe",
     "fields": [
         {
-            "key": "field_58278cd9d4bb1",
-            "label": "Ingredients",
-            "name": "ingredients",
-            "type": "repeater",
-            "instructions": "",
+            "key": "field_582cbcc99c30f",
+            "label": "Night Made",
+            "name": "night_made",
+            "type": "date_picker",
+            "instructions": "When was this recipe made?",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
+            "first_day": 0
+        },
+        {
+            "key": "field_582cbca5f36f4",
+            "label": "Source URL",
+            "name": "source_url",
+            "type": "url",
+            "instructions": "If you followed a recipe from online, give us the URL so we can credit them.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,7 +32,65 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_58278db4d4bb3",
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_582cbb48ed4b6",
+            "label": "Servings",
+            "name": "servings",
+            "type": "number",
+            "instructions": "How many servings does this make?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_582cbba2ed4b7",
+            "label": "Cooking Time",
+            "name": "cooking_time",
+            "type": "number",
+            "instructions": "How long does it take to make (in minutes)?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": "",
+            "step": 5
+        },
+        {
+            "key": "field_58278cd9d4bb1",
+            "label": "Ingredients",
+            "name": "ingredients",
+            "type": "repeater",
+            "instructions": "Name all the foods you used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
             "min": "",
             "max": "",
             "layout": "table",
@@ -30,12 +105,31 @@
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
+                    "placeholder": 1,
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_582cbd8dc99c3",
+                    "label": "Measure",
+                    "name": "measure",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "cup",
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
@@ -49,12 +143,12 @@
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "60",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
+                    "placeholder": "magic sauce",
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
@@ -63,10 +157,10 @@
         },
         {
             "key": "field_58278e8ec2ea7",
-            "label": "Instructions",
-            "name": "instructions",
+            "label": "Directions",
+            "name": "directions",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Tell us how to make it.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -78,7 +172,7 @@
             "min": "",
             "max": "",
             "layout": "table",
-            "button_label": "Add Row",
+            "button_label": "Add Step",
             "sub_fields": [
                 {
                     "key": "field_58278ec5c2ea8",
@@ -94,10 +188,29 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
+                    "placeholder": "Put it in the oven.",
                     "maxlength": "",
                     "rows": "",
                     "new_lines": ""
+                },
+                {
+                    "key": "field_582cbc70ed4b8",
+                    "label": "Tip",
+                    "name": "tip",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Pro tip \u2014 closing the oven helps keep the heat inside.",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "wpautop"
                 }
             ]
         }
@@ -119,5 +232,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478989941
+    "modified": 1479333967
 }
