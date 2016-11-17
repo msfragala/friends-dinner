@@ -116,25 +116,6 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_582cbd8dc99c3",
-                    "label": "Measure",
-                    "name": "measure",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "20",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "cup",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
                     "key": "field_58278db4d4bb3",
                     "label": "Ingredient",
                     "name": "ingredient",
@@ -257,5 +238,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1479409270
+    "modified": 1479418237
 }
