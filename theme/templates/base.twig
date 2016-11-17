@@ -15,28 +15,29 @@
       <link rel="stylesheet" href="{{site.theme.link}}/assets/css/index.css">
     {%- endblock styles -%}
   </head>
-  <body class="{{body_class}}">
+  <body class="page {{body_class}}">
+    <div class="page__wrapper">
 
-    {%- block header -%}
-      <header class="page__header">
-        {%- include 'header.twig' -%}
-      </header>
-    {%- endblock header -%}
+      {%- block header -%}
+        <header class="page__header">
+          {%- include 'header.twig' -%}
+        </header>
+      {%- endblock header -%}
 
-    <main class="content">
-      {%- block content -%}Sorry, not content!{%- endblock content -%}
-    </main>
+      <main class="content">
+        {%- block content -%}Sorry, not content!{%- endblock content -%}
+      </main>
 
-    {%- block footer -%}
-      <footer class="page__footer">
-        {%- include 'footer.twig' -%}
-      </footer>
-    {%- endblock footer -%}
+      {%- block footer -%}
+        <footer class="page__footer">
+          {%- include 'footer.twig' -%}
+        </footer>
+      {%- endblock footer -%}
 
+    </div>
     {{wp_footer}}
     {%- block scripts -%}
       <script src="{{site.theme.link}}/assets/js/index.js"></script>
     {%- endblock scripts -%}
   </body>
 </html>
-
