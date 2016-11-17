@@ -51,3 +51,11 @@
 .emoji-sheet {
   display: none;
 }
+
+.recipe-gallery__heading {
+  color: $color-red-1;
+  font-size: 3.5rem;
+  line-height: 1em;
+  margin: 60px 0;
+  text-align: center;
+}
