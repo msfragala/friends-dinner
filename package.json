@@ -13,7 +13,8 @@
     "node": ">=6.9.1"
   },
   "scripts": {
-    "lint": "eslint . & stylelint 'src/css/**/*.css'; exit 0"
+    "lint": "eslint . & stylelint 'src/css/**/*.css'; exit 0",
+    "start": "gulp -w"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
