@@ -3,14 +3,13 @@
 // configure template directories
 Timber::$dirname = array('templates', 'views');
 
-/**
- * FriendsDinnerSite
- * * extends Timber context
- * * extends Twig
- * * enqueues scripts
- * * registers post types
- * * registers taxonomies
- */
+// contains miscellaneous utility functions
+require('lib/helpers.php');
+
+// declares FriendsDinnerSite subclass of TimberSite
 require('lib/FriendsDinnerSite.php');
+
+// declares FriendsDinnerRecipe subclass of TimberPost
+require('lib/FriendsDinnerRecipe.php');
 
 new FriendsDinnerSite();

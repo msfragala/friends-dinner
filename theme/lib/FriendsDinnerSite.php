@@ -9,6 +9,7 @@
  * * registers taxonomies
  */
 class FriendsDinnerSite {
+
   function __construct() {
     add_theme_support('post-formats');
     add_theme_support('post-thumbnails');
@@ -82,4 +83,5 @@ class FriendsDinnerSite {
   function register_taxonomies() {
 
   }
+
 }

@@ -217,7 +217,7 @@
         {
             "key": "field_582df3564849d",
             "label": "Images",
-            "name": "images",
+            "name": "__images",
             "type": "gallery",
             "instructions": "Let's see some pictures, please.",
             "required": 1,
@@ -257,5 +257,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1479406676
+    "modified": 1479409270
 }
