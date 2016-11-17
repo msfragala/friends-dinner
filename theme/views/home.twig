@@ -23,5 +23,22 @@
 
   <section class="recipes-gallery">
     <h1 class="recipe-gallery__heading">Recipes</h1>
+    <div class="recipe-teases">
+      {%- for recipe in recipes|slice(0, 8) -%}
+        <article class="recipe-tease">
+          <figure class="recipe-tease__figure">
+            <a class="recipe-tease__figure-link" href="{{recipe.link}}">
+              {%- set image = recipe.images | first -%}
+              <img class="recipe-tease__img" data-src="{{image.src}}" alt="{{image.alt ?: 'Friends Dinner'}}">
+            </a>
+            <span class="recipe-tease__dopple"></span>
+            <span class="recipe-tease__dopple"></span>
+            <span class="recipe-tease__dopple"></span>
+          </figure>
+          <time class="recipe-tease__date" datetime="{{recipe.night_made|date('c')}}">{{recipe.night_made|date('M. j')}}</time>
+          <h2 class="recipe-tease__title"><a class="recipe-tease__title-link" href="{{recipe.link}}">{{recipe.title}}</a></h2>
+        </article>
+      {%- endfor -%}
+    </div>
   </section>
 {%- endblock content -%}
