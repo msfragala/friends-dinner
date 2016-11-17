@@ -75,7 +75,7 @@
             "append": "",
             "min": 1,
             "max": "",
-            "step": 5
+            "step": ""
         },
         {
             "key": "field_58278cd9d4bb1",
@@ -83,7 +83,7 @@
             "name": "ingredients",
             "type": "repeater",
             "instructions": "Name all the foods you used.",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -161,7 +161,7 @@
             "name": "directions",
             "type": "repeater",
             "instructions": "Tell us how to make it.",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -213,6 +213,31 @@
                     "new_lines": "wpautop"
                 }
             ]
+        },
+        {
+            "key": "field_582df3564849d",
+            "label": "Images",
+            "name": "images",
+            "type": "gallery",
+            "instructions": "Let's see some pictures, please.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "uploadedTo",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 2,
+            "mime_types": "jpeg, jpg, png"
         }
     ],
     "location": [
@@ -232,5 +257,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1479333967
+    "modified": 1479406676
 }
