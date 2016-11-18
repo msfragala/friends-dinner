@@ -4,6 +4,7 @@
 
 .recipe-tease__link {
   @mixin focus-outline;
+
   display: block;
   margin: * auto;
   max-width: 400px;
@@ -11,7 +12,7 @@
   text-decoration: none;
 }
 
-.recipe-tease__link:after {
+.recipe-tease__link::after {
   background: rgba($color-red-1, 0.4);
   content: '';
   display: block;
@@ -68,7 +69,7 @@
   }
 }
 
-.recipe-tease__image:before {
+.recipe-tease__image::before {
   background: rgba($color-black-1, 0.2);
   content: '';
   position: absolute 0;

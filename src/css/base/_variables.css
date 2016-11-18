@@ -1,4 +1,18 @@
 /******************************
+  Breakpoints
+******************************/
+
+$bp-mobile-s: 320px;
+$bp-mobile-m: 360px;
+$bp-mobile-l: 414px;
+
+$bp-tablet-m: 768px;
+$bp-tablet-l: 960px;
+
+$bp-desktop-s: 1024px;
+$bp-desktop-m: 1440px;
+
+/******************************
   Color Variables
 ******************************/
 
