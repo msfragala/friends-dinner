@@ -1,5 +1,4 @@
 @import './base/variables';
-@import './base/mixins';
 @import './base/index';
 @import './partials/graphics';
 @import './views/home';
