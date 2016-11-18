@@ -1,0 +1,8 @@
+@define-mixin focus-outline {
+  outline: 2px solid transparent;
+  outline-offset: 10px;
+
+  &:focus {
+    outline-color: $color-outline;
+  }
+}

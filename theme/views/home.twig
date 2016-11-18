@@ -26,7 +26,7 @@
     <div class="recipe-teases">
       {%- for recipe in recipes|slice(0, 8) -%}
         <article class="recipe-tease">
-          <a class="recipe-tease__link" href="{{recipe.link}}">
+          <a class="recipe-tease__link" href="{{recipe.link}}" tabindex="0">
             <div class="recipe-tease__figure">
               <div class="recipe-tease__dopple"></div>
               <div class="recipe-tease__dopple"></div>
@@ -36,7 +36,6 @@
               </div>
             </div>
             <h2 class="recipe-tease__title">{{recipe.title}}</h2>
-            <time class="recipe-tease__date" datetime="{{recipe.night_made|date('c')}}">{{recipe.night_made|date('M. j')}}</time>
           </a>
         </article>
       {%- endfor -%}

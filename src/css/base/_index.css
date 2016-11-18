@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   position: relative;
+  transition: all 300ms;
 }
 
 html {
@@ -19,5 +20,5 @@ body {
 main {
   margin: 0 auto;
   max-width: 1000px;
-  padding: 0 40px;
+  padding: 0 30px;
 }
