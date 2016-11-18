@@ -28,6 +28,7 @@
     "gulp-postcss": "^6.2.0",
     "gulp-print": "^2.0.1",
     "postcss-media-minmax": "^2.1.2",
+    "postcss-short": "^2.0.1",
     "precss": "^1.4.0",
     "rucksack-css": "^0.8.6",
     "stylelint": "^7.5.0",
