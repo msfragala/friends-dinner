@@ -27,6 +27,8 @@
 }
 
 .recipe-tease__link {
+  @mixin focus-outline;
+
   display: block;
   size: 100%;
   text-decoration: none;
