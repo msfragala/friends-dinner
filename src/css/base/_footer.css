@@ -1,0 +1,32 @@
+.page__footer {
+  padding: 120px * 20px;
+}
+
+.footer__credit {
+  color: $color-red-1;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.footer__heart .emoji {
+  animation: 200ms infinite heart-beat alternate both;
+  display: inline-block;
+  margin: * 6px;
+  size: 1.5rem;
+  vertical-align: middle;
+
+  .footer__credit:hover & {
+    animation-duration: 120ms;
+  }
+}
+
+@keyframes heart-beat {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.25);
+  }
+}
