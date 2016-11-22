@@ -22,22 +22,10 @@
   <span class="downline downline--long"></span>
 
   <section class="recipes-gallery">
-    <h1 class="recipe-gallery__heading">Recipes</h1>
+    <h1 class="recipe-gallery__heading">Latest Recipes</h1>
     <div class="recipe-teases">
       {%- for recipe in recipes|slice(0, 8) -%}
-        <article class="recipe-tease">
-          <a class="recipe-tease__link" href="{{recipe.link}}" tabindex="0">
-            <div class="recipe-tease__figure">
-              <div class="recipe-tease__dopple"></div>
-              <div class="recipe-tease__dopple"></div>
-              <div class="recipe-tease__dopple"></div>
-              <div class="recipe-tease__image-wrapper">
-                <div class="recipe-tease__image" style="background-image: url({{recipe.images[0].src}});"></div>
-              </div>
-            </div>
-            <h2 class="recipe-tease__title">{{recipe.title}}</h2>
-          </a>
-        </article>
+        {%- include 'recipe-tease.twig' -%}
       {%- endfor -%}
     </div>
   </section>
