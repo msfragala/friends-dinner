@@ -20,8 +20,7 @@
   }
 
   @media (width >= $bp-tablet-l) {
-    max-width: 900px;
-    padding: 10px 0 0 10px;
+    max-width: 820px;
     width: 100%;
   }
 }
@@ -37,15 +36,16 @@
     align-content: flex-start;
     display: flex;
     flex-wrap: nowrap;
+    justify-content: flex-start;
 
     .recipe-tease:nth-child(odd) & {
       flex-direction: row;
-      justify-content: flex-start;
+      padding: 10px 0 0 10px;
     }
 
     .recipe-tease:nth-child(even) & {
       flex-direction: row-reverse;
-      justify-content: flex-end;
+      padding: 10px 10px 0 0;
     }
   }
 }
@@ -64,7 +64,7 @@
 
   @media (width >= $bp-tablet-l) {
     display: inline-block;
-    size: 45% 260px;
+    size: 43% 225px;
 
     .recipe-tease:nth-child(odd) & {
       margin: * 20px 30px 0;
@@ -153,9 +153,8 @@
   }
 
   @media (width >= $bp-tablet-l) {
-    font-size: 2.2rem;
-    padding-top: 60px;
-    top: 140px;
+    font-size: 2rem;
+    padding-top: 160px;
     vertical-align: top;
     width: calc(55% - 20px);
 
@@ -177,7 +176,7 @@
     content: '';
     position: absolute;
     size: 70% 6px;
-    top: 0;
+    top: 110px;
 
     .recipe-tease:nth-child(odd) & {
       left: -30%;
