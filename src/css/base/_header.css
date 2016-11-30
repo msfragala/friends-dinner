@@ -20,6 +20,8 @@
 }
 
 .navbar__link {
+  @mixin focus-outline;
+
   display: block;
   color: $color-red-1;
   font-family: $font-crimson-text;

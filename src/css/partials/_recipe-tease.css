@@ -26,7 +26,7 @@
 }
 
 .recipe-tease__link {
-  @mixin focus-outline;
+  @mixin focus-outline 20px;
 
   display: block;
   size: 100%;
