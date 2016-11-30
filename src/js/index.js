@@ -11,13 +11,13 @@ const drinkIds = collectSymbolIds(drinkEmoji)
 const peopleIds = collectSymbolIds(peopleEmoji)
 
 setInterval(() => {
-  updateEmoji(foodEmoji, foodIds)
-  updateEmoji(drinkEmoji, drinkIds)
-  updateEmoji(peopleEmoji, peopleIds)
+  updateEmoji(foodEmoji, chooseRandom(foodIds))
+  updateEmoji(drinkEmoji, chooseRandom(drinkIds))
+  updateEmoji(peopleEmoji, chooseRandom(peopleIds))
 }, 2000)
 
-function updateEmoji(sheet, ids) {
-  sheet.children[0].setAttribute('xlink:href', chooseRandom(ids))
+function updateEmoji(sheet, href) {
+  sheet.firstElementChild.setAttribute('xlink:href', href)
 }
 
 function chooseRandom(input) {
