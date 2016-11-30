@@ -1,0 +1,13 @@
+<nav class="navbar">
+  <ul class="navbar__items">
+    <li class="navbar__item{{ current_page == 'home' ? ' navbar__item--active' }}">
+      <a href="/" class="navbar__link" tabindex="0">Home</a>
+    </li>
+    <li class="navbar__item{{ current_page == 'recipes' ? ' navbar__item--active' }}">
+      <a href="/recipes" class="navbar__link" tabindex="0">Recipes</a>
+    </li>
+    <li class="navbar__item{{ current_page == 'dinners' ? ' navbar__item--active' }}">
+      <a href="/dinners" class="navbar__link" tabindex="0">Dinners</a>
+    </li>
+  </ul>
+</nav>

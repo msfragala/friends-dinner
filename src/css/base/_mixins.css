@@ -1,6 +1,11 @@
-@define-mixin focus-outline {
-  outline: 2px solid transparent;
-  outline-offset: 20px;
+/*
+ * Focus Outline
+ */
+@define-mixin focus-outline $offset: 0 {
+  outline-color: transparent;
+  outline-style: solid;
+  outline-offset: $offset;
+  outline-width: 3px;
 
   &:focus {
     outline-color: $color-outline;
