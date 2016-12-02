@@ -2,10 +2,10 @@
 
 $context = Timber::get_context();
 
-$context['current_page'] = 'home';
+$context['post'] = new TimberPost();
 
 $context['recipes'] = Timber::get_posts(array(
   post_type => 'recipe'
 ), "FriendsDinnerRecipe");
 
-Timber::render('home.twig', $context);
+Timber::render('page-home.twig', $context);
