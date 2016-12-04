@@ -4,21 +4,25 @@
 
   <h1 class="content-heading">Recipes</h1>
 
-  <div class="recipe-manifest-list" style="font-size: 1rem; line-height: 1em;">
+  <ul class="recipes-list" style="font-size: 1rem; line-height: 1em;">
     {%- for recipe in recipes -%}
-      <article class="recipe-manifest">
-        <figure class="recipe-manifest__figure">
-          <img class="recipe-manifest__image" data-src="{{recipe.images[0].src}}" alt="{{recipe.title}}"/>
-        </figure>
-        <section class="recipe-manifest__details">
-          <h2 class="recipe-manifest__title">{{recipe.title}}</h2>
-          <p class="recipe-manifest__night-made"><time datetime="{{recipe.night_made|date('Y-m-d')}}">{{recipe.night_made|date('n-j-Y')}}</time></p>
-          <p class="recipe-manifest__ingredient-count">{{recipe.get_field('ingredients')|length}} ingredients</p>
-          <p class="recipe-manifest__cooking-time">{{recipe.cooking_time}} minutes</p>
-          <p class="recipe-manifest__step-count">{{recipe.get_field('directions')|length}} steps</p>
-        </section>
-      </article>
+      <li class="recipes-item">
+        <article class="recipe-manifest">
+          <a class="recipe-manifest__link" href="{{recipe.link}}" tabindex="0">
+            <figure class="recipe-manifest__figure">
+              <img class="recipe-manifest__image" src="{{recipe.images[0].src}}" alt="{{recipe.title}}"/>
+            </figure>
+            <section class="recipe-manifest__details">
+              <p class="recipe-manifest__night-made"><time datetime="{{recipe.night_made|date('Y-m-d')}}">{{recipe.night_made|date('F j, Y')}}</time></p>
+              <h2 class="recipe-manifest__title">{{recipe.title}}</h2>
+              <p class="recipe-manifest__cooking-time">{{recipe.cooking_time}} minutes</p>
+              <p class="recipe-manifest__ingredient-count">{{recipe.get_field('ingredients')|length}} ingredients</p>
+              <p class="recipe-manifest__step-count">{{recipe.get_field('directions')|length}} steps</p>
+            </section>
+          </a>
+        </article>
+      </li>
     {%- endfor -%}
-  </div>
+  </ul>
 
 {%- endblock content -%}

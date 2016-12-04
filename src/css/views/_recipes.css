@@ -1,0 +1,17 @@
+.page--recipes .content-heading {
+  color: $color-red-1;
+  font-family: $font-noto-sans;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.recipes-list {
+  padding-top: 80px;
+  list-style: none;
+}
+
+.recipes-item {
+  list-style: none;
+}

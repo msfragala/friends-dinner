@@ -21,3 +21,7 @@ main {
   max-width: 1000px;
   padding: 0 30px;
 }
+
+[tabindex="0"] {
+  @mixin focus-outline;
+}

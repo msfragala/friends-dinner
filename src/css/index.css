@@ -5,4 +5,6 @@
 @import './base/index';
 @import './partials/graphics';
 @import './partials/recipe-tease';
+@import './partials/recipe-manifest';
 @import './views/home';
+@import './views/recipes';

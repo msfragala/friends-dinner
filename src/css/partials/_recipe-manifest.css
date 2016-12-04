@@ -1,0 +1,98 @@
+$manifest-border-width: 2px;
+
+.recipe-manifest {
+  border-top: 2px solid rgba($color-red-1, 0.8);
+  padding: 25px;
+
+  li:first-child & {
+    border-top: none;
+  }
+}
+
+.recipe-manifest__link {
+  @mixin focus-outline 8px;
+
+  display: block;
+  font-size: 0;
+  text-decoration: none;
+}
+
+.recipe-manifest__figure {
+  display: inline-block;
+  background: $color-red-1;
+  overflow: hidden;
+  size: 270px 180px;
+  vertical-align: top;
+
+  &:after {
+    content: '';
+    background-color: $color-black-1;
+    opacity: 0.25;
+    position: absolute 0 0;
+    size: 100%;
+  }
+}
+
+.recipe-manifest__image {
+  min-height: 100%;
+  max-width: 100%;
+  position: absolute 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
+.recipe-manifest__details {
+  display: inline-block;
+  padding-left: 28px;
+  width: calc(100% - 270px);
+}
+
+.recipe-manifest__title {
+  color: $color-red-1;
+  font-family: $font-crimson-text;
+  font-size: responsive 2rem 2.8rem;
+  font-weight: 600;
+  line-height: 1em;
+  margin-bottom: 15px;
+}
+
+.recipe-manifest__night-made {
+  background: $color-red-1;
+  color: $color-red-2;
+  display: inline-block;
+  font-family: $font-noto-sans;
+  font-size: responsive 0.8rem 1.1rem;
+  line-height: 1.4em;
+  margin-bottom: 10px;
+  padding: 2px 20px;
+}
+
+.recipe-manifest__cooking-time,
+.recipe-manifest__ingredient-count,
+.recipe-manifest__step-count {
+  color: $color-red-1;
+  font-family: $font-noto-sans;
+  font-size: responsive 0.8rem 1.1rem;
+  line-height: 1.4em;
+
+  &::before {
+    background-size: cover;
+    content: '';
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 12px;
+    size: 1em;
+    vertical-align: middle;
+  }
+}
+
+.recipe-manifest__cooking-time::before {
+  background-image: url('../img/emoji/kitchen_timer--red.svg');
+}
+
+.recipe-manifest__ingredient-count::before {
+  background-image: url('../img/emoji/meat_stick--red.svg');
+}
+
+.recipe-manifest__step-count::before {
+  background-image: url('../img/emoji/chefs_knife--red.svg');
+}
