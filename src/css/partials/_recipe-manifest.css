@@ -15,13 +15,16 @@ $manifest-border-width: 2px;
   display: block;
   font-size: 0;
   text-decoration: none;
+
+  @media (width < $bp-tablet-s) {
+    margin: * auto;
+    max-width: 400px;
+  }
 }
 
 .recipe-manifest__figure {
-  display: inline-block;
   background: $color-red-1;
   overflow: hidden;
-  size: 270px 180px;
   vertical-align: top;
 
   &:after {
@@ -30,6 +33,22 @@ $manifest-border-width: 2px;
     opacity: 0.25;
     position: absolute 0 0;
     size: 100%;
+  }
+
+  @media (width >= $bp-tablet-s) {
+    display: inline-block;
+    size: 270px 180px;
+  }
+
+  @media (width < $bp-tablet-s) {
+    display: block;
+    margin-bottom: 18px;
+    max-width: 400px;
+    size: 100% 240px;
+  }
+
+  @media (width < $bp-mobile-l) {
+    size: 100% 180px;
   }
 }
 
@@ -42,14 +61,26 @@ $manifest-border-width: 2px;
 
 .recipe-manifest__details {
   display: inline-block;
-  padding-left: 28px;
   width: calc(100% - 270px);
+
+  @media (width < $bp-tablet-s) {
+    display: block;
+    margin: * auto;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  @media (width >= $bp-tablet-s) {
+    display: inline-block;
+    padding-left: 28px;
+    width: calc(100% - 270px);
+  }
 }
 
 .recipe-manifest__title {
   color: $color-red-1;
   font-family: $font-crimson-text;
-  font-size: responsive 2rem 2.8rem;
+  font-size: responsive 2.2rem 2.8rem;
   font-weight: 600;
   line-height: 1em;
   margin-bottom: 15px;
@@ -60,7 +91,7 @@ $manifest-border-width: 2px;
   color: $color-red-2;
   display: inline-block;
   font-family: $font-noto-sans;
-  font-size: responsive 0.8rem 1.1rem;
+  font-size: 1rem;
   line-height: 1.4em;
   margin-bottom: 10px;
   padding: 2px 20px;
@@ -71,7 +102,7 @@ $manifest-border-width: 2px;
 .recipe-manifest__step-count {
   color: $color-red-1;
   font-family: $font-noto-sans;
-  font-size: responsive 0.8rem 1.1rem;
+  font-size: 1rem;
   line-height: 1.4em;
 
   &::before {
