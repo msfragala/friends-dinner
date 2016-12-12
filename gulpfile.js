@@ -1,3 +1,4 @@
+const bsync = require('browser-sync')
 const chalk = require('chalk')
 const gulp = require('gulp')
 const named = require('vinyl-named')
@@ -7,6 +8,7 @@ const webpack = require('webpack-stream')
 const yargs = require('yargs')
 
 const argv = yargs.argv
+const browser = bsync.create()
 const watchers = {}
 
 const postcssConfig = require('./postcss.config.js')
@@ -20,6 +22,7 @@ const webpackConfig = require('./webpack.config.js')
 gulp.task('build', Build)
 gulp.task('default', Default)
 gulp.task('scripts', Scripts)
+gulp.task('serve', Serve)
 gulp.task('styles', Styles)
 gulp.task('watch', Watch)
 
@@ -52,6 +55,16 @@ function Build(done) {
 function Watch() {
   watchStyles(true)
   watchScripts(true)
+}
+
+function Serve() {
+  browser.init({
+    ghostMode: false,
+    notify: false,
+    open: false,
+    port: 3000,
+    proxy: 'localhost:8000'
+  })
 }
 
 function Default(done) {
