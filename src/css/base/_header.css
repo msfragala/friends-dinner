@@ -1,14 +1,30 @@
-.navbar {}
+.page__header {
+  display: inline-block;
+  padding: 10px *;
+  width: 100%;
+
+  @media (width < $bp-tablet-s) {
+
+    &:after {
+      background-color: rgba($color-red-1, 0.8);
+      bottom: 0;
+      content: '';
+      left: 50%;
+      position: absolute;
+      size: 86% 1px;
+      transform: translateX(-50%);
+    }
+  }
+}
 
 .navbar__items {
-  @media (width < $bp-tablet-l) {
-    margin: 10px auto;
+  @media (width < $bp-tablet-s) {
+    margin: * auto;
     text-align: center;
     width: 80%;
   }
 
-  @media (width >= $bp-tablet-l) {
-    margin: 10px 0 20px;
+  @media (width >= $bp-tablet-s) {
     padding-right: 15px;
     text-align: right;
     width: 100%;
@@ -17,6 +33,12 @@
 
 .navbar__item {
   display: inline-block;
+
+  @media (width < $bp-tablet-s) {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
 }
 
 .navbar__link {
@@ -25,9 +47,10 @@
   display: block;
   color: $color-red-1;
   font-family: $font-crimson-text;
-  font-size: 1rem;
+  font-size: 1.3rem;
   letter-spacing: 0.06em;
   line-height: 0.7em;
+  padding: 15px *;
   text-decoration: none;
   text-transform: lowercase;
 
@@ -36,12 +59,11 @@
     text-decoration: line-through;
   }
 
-  @media (width < $bp-tablet-l) {
-    padding: 15px 10px;
+  @media (width < $bp-tablet-s) {
+    padding: * 12px;
   }
 
-  @media (width >= $bp-tablet-l) {
-    font-size: 1.1rem;
-    padding: 10px 15px;
+  @media (width >= $bp-tablet-s) {
+    padding: * 16px;
   }
 }

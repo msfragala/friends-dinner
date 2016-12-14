@@ -11,13 +11,20 @@ html {
   background-color: $color-red-2;
 }
 
-body {
+.page {
   font-size: 0;
   line-height: 0;
 }
 
-main {
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page__content {
   margin: 0 auto;
+  flex: 1;
   max-width: 1000px;
   padding: 0 30px;
 }
