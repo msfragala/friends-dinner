@@ -57,6 +57,11 @@ $manifest-border-width: 2px;
   max-width: 100%;
   position: absolute 50% auto auto 50%;
   transform: translate(-50%, -50%);
+  transition: transform $trans-duration;
+
+  .recipe-manifest__link:hover & {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 }
 
 .recipe-manifest__details {
@@ -84,6 +89,10 @@ $manifest-border-width: 2px;
   font-weight: 600;
   line-height: 1em;
   margin-bottom: 15px;
+
+  .recipe-manifest__link:hover & {
+    text-decoration: line-through;
+  }
 }
 
 .recipe-manifest__night-made {

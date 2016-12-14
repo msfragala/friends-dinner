@@ -29,3 +29,9 @@ $color-outline: rgb(59, 153, 252);
 
 $font-noto-sans: 'Noto Sans', sans-serif;
 $font-crimson-text: 'Crimson Text', serif;
+
+/******************************
+  Transition Variables
+******************************/
+
+$trans-duration: 300ms;
