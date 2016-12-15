@@ -23,10 +23,11 @@ html {
 }
 
 .page__content {
-  margin: 0 auto;
   flex: 1;
+  margin: 0 auto;
   max-width: 1000px;
   padding: 0 30px;
+  width: 100%;
 }
 
 [tabindex="0"] {
