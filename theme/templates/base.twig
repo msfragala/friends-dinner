@@ -15,7 +15,7 @@
       <link rel="stylesheet" href="{{site.theme.link}}/assets/css/index.css">
     {%- endblock styles -%}
   </head>
-  <body class="page page--{{post.slug}} page--{{post.post_type}} {{body_class}}">
+  <body class="page page--{{post.slug ?: slug}} page--{{post.post_type ?: type}} {{body_class}}">
     <div class="page__wrapper">
 
       {%- block header -%}
