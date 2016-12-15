@@ -13,9 +13,9 @@
 }
 
 /**
- * Line Under
+ * Underline Base
  */
-@define-mixin underline $color: $color-red-1 {
+@define-mixin underline-base $color {
   &:after {
     background-color: $color;
     bottom: 3px;
@@ -23,5 +23,17 @@
     left: 0;
     position: absolute;
     size: 100% 3px;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: transform 150ms;
+  }
+}
+
+/**
+ * Underline Active
+ */
+@define-mixin underline-active {
+  &:after {
+    transform: scale(1);
   }
 }

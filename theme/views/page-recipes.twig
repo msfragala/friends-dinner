@@ -1,3 +1,5 @@
+{%- set wp_title = "Friend's Dinner | Recipes" -%}
+
 {%- extends 'base.twig' -%}
 
 {%- block content -%}
@@ -30,6 +32,6 @@
 
 {%- block inner_footer -%}
 
-  {%- include 'pagination.twig' with {'pagination': recipes.pagination} only -%}
+  {%- include 'pagination.twig' -%}
 
 {%- endblock inner_footer -%}
