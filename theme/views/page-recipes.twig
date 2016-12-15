@@ -26,3 +26,10 @@
   </ul>
 
 {%- endblock content -%}
+
+
+{%- block inner_footer -%}
+
+  {%- include 'pagination.twig' with {'pagination': recipes.pagination} only -%}
+
+{%- endblock inner_footer -%}

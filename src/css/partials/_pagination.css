@@ -1,0 +1,39 @@
+.pagination {}
+
+.pagination__list {
+  text-align: center;
+}
+
+.pagination__item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.pagination__link {
+  color: $color-red-1;
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  padding: 5px;
+  text-decoration: none;
+
+  &.is-current,
+  &:hover {
+    @mixin underline;
+  }
+}
+
+.pagination__link--deictic {
+  color: rgba($color-black-1, 0.9);
+
+  &[href]:hover {
+    @mixin underline $color-black-1;
+  }
+
+  &[aria-disabled="true"] {
+    color: rgba($color-black-1, 0.4);
+  }
+}

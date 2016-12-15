@@ -1,4 +1,4 @@
-/*
+/**
  * Focus Outline
  */
 @define-mixin focus-outline $offset: 0 {
@@ -9,5 +9,19 @@
 
   &:focus {
     outline-color: $color-outline;
+  }
+}
+
+/**
+ * Line Under
+ */
+@define-mixin underline $color: $color-red-1 {
+  &:after {
+    background-color: $color;
+    bottom: 3px;
+    content: '';
+    left: 0;
+    position: absolute;
+    size: 100% 3px;
   }
 }

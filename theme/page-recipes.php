@@ -4,8 +4,10 @@ global $params;
 
 $context = Timber::get_context();
 
-$context['slug'] = 'recipes';
-$context['type'] = 'archive';
+$context['post'] = array(
+  slug => 'recipes',
+  post_type => 'archive'
+);
 
 $context['recipes'] = new Timber\PostQuery(array(
   posts_per_page => 1,

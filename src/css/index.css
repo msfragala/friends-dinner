@@ -4,6 +4,7 @@
 @import './base/header';
 @import './base/index';
 @import './partials/graphics';
+@import './partials/pagination';
 @import './partials/recipe-tease';
 @import './partials/recipe-manifest';
 @import './views/home';

@@ -1,0 +1,31 @@
+<nav class="pagination">
+  <ul class="pagination__list">
+
+    {# previous page #}
+    <li class="pagination__item">
+      {%- if pagination.prev.link|length > 0 -%}
+        <a href="{{pagination.prev.link}}" class="pagination__link pagination__link--deictic" tabindex="0">&larr;</a>
+      {%- else -%}
+        <a class="pagination__link pagination__link--deictic" aria-disabled="true" tabindex="-1">&larr;</a>
+      {%- endif -%}
+    </li>
+
+    {# enumerated pages #}
+    {%- for page in pagination.pages -%}
+      <li class="pagination__item">
+        {% set current = 'current' in page.class %}
+        <a href="{{page.link}}" class="pagination__link{{ current ? ' is-current' }}" tabindex="0">{{page.title}}</a>
+      </li>
+    {%- endfor -%}
+
+    {# next page #}
+    <li class="pagination__item">
+      {%- if pagination.next.link|length > 0 -%}
+        <a href="{{pagination.next.link}}" class="pagination__link pagination__link--deictic" tabindex="0">&rarr;</a>
+      {%- else -%}
+        <a class="pagination__link pagination__link--deictic" aria-disabled="true" tabindex="-1">&rarr;</a>
+      {%- endif -%}
+    </li>
+
+  </ul>
+</nav>
